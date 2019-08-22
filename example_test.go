@@ -1,13 +1,13 @@
-package template_test
+package logr_test
 
 import (
 	"github.com/goph/logur"
 
-	templateintegration "logur.dev/integration/template"
+	logrintegration "logur.dev/integration/logr"
 )
 
 func ExampleNew() {
-	logger := templateintegration.New(logur.NewNoopLogger())
+	logger := logrintegration.New(logur.NewNoopLogger())
 
 	// Output:
 	_ = logger

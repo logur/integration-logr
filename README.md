@@ -1,17 +1,17 @@
-# Logur integration for TEMPLATE
+# Logur integration for [Logr](https://github.com/go-logr/logr) interface
 
-[![CircleCI](https://circleci.com/gh/logur/integration-template.svg?style=svg)](https://circleci.com/gh/logur/integration-template)
-[![Coverage](https://gocover.io/_badge/logur.dev/integration/template)](https://gocover.io/logur.dev/integration/template)
-[![Go Report Card](https://goreportcard.com/badge/logur.dev/integration/template?style=flat-square)](https://goreportcard.com/report/logur.dev/integration/template)
-[![GolangCI](https://golangci.com/badges/github.com/logur/integration-template.svg)](https://golangci.com/r/github.com/logur/integration-template)
-[![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)](https://github.com/logur/integration-template)
-[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/logur.dev/integration/template)
+[![CircleCI](https://circleci.com/gh/logur/integration-logr.svg?style=svg)](https://circleci.com/gh/logur/integration-logr)
+[![Coverage](https://gocover.io/_badge/logur.dev/integration/logr)](https://gocover.io/logur.dev/integration/logr)
+[![Go Report Card](https://goreportcard.com/badge/logur.dev/integration/logr?style=flat-square)](https://goreportcard.com/report/logur.dev/integration/logr)
+[![GolangCI](https://golangci.com/badges/github.com/logur/integration-logr.svg)](https://golangci.com/r/github.com/logur/integration-logr)
+[![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)](https://github.com/logur/integration-logr)
+[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/logur.dev/integration/logr)
 
 
 ## Installation
 
 ```bash
-go get logur.dev/integration/template
+go get logur.dev/integration/logr
 ```
 
 
@@ -22,11 +22,11 @@ package main
 
 import (
 	"github.com/goph/logur"
-	templateintegration "logur.dev/integration/template"
+	logrintegration "logur.dev/integration/logr"
 )
 
 func main() {
-	logger := templateintegration.New(logur.NewNoopLogger())
+	logger := logrintegration.New(logur.NewNoopLogger())
 }
 ```
 
