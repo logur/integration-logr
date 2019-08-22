@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/go-logr/logr"
-	"github.com/goph/logur"
+	"logur.dev/logur"
 
 	"logur.dev/integration/logr/internal/keyvals"
 )

@@ -21,7 +21,7 @@ go get logur.dev/integration/logr
 package main
 
 import (
-	"github.com/goph/logur"
+	"logur.dev/logur"
 	logrintegration "logur.dev/integration/logr"
 )
 
