@@ -1,7 +1,7 @@
 package logr_test
 
 import (
-	"github.com/goph/logur"
+	"logur.dev/logur"
 
 	logrintegration "logur.dev/integration/logr"
 )
