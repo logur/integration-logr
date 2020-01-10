@@ -1,7 +1,7 @@
 # Logur integration for [Logr](https://github.com/go-logr/logr) interface
 
-[![CircleCI](https://circleci.com/gh/logur/integration-logr.svg?style=svg)](https://circleci.com/gh/logur/integration-logr)
-[![Coverage](https://gocover.io/_badge/logur.dev/integration/logr)](https://gocover.io/logur.dev/integration/logr)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/logur/integration-logr/CI?style=flat-square)
+[![Codecov](https://img.shields.io/codecov/c/github/logur/integration-logr?style=flat-square)](https://codecov.io/gh/logur/integration-logr)
 [![Go Report Card](https://goreportcard.com/badge/logur.dev/integration/logr?style=flat-square)](https://goreportcard.com/report/logur.dev/integration/logr)
 [![GolangCI](https://golangci.com/badges/github.com/logur/integration-logr.svg)](https://golangci.com/r/github.com/logur/integration-logr)
 [![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)](https://github.com/logur/integration-logr)
@@ -35,7 +35,7 @@ func main() {
 
 When all coding and testing is done, please run the test suite:
 
-``` bash
+```bash
 $ make check
 ```
 
