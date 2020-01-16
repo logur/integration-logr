@@ -7,7 +7,7 @@ import (
 )
 
 func ExampleNew() {
-	logger := logrintegration.New(logur.NewNoopLogger())
+	logger := logrintegration.New(logur.NoopLogger{})
 
 	// Output:
 	_ = logger
