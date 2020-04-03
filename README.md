@@ -1,11 +1,10 @@
 # Logur integration for [Logr](https://github.com/go-logr/logr) interface
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/logur/integration-logr/CI?style=flat-square)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/logur/integration-logr/CI?style=flat-square)](https://github.com/logur/integration-logr/actions?query=workflow%3ACI)
 [![Codecov](https://img.shields.io/codecov/c/github/logur/integration-logr?style=flat-square)](https://codecov.io/gh/logur/integration-logr)
 [![Go Report Card](https://goreportcard.com/badge/logur.dev/integration/logr?style=flat-square)](https://goreportcard.com/report/logur.dev/integration/logr)
-[![GolangCI](https://golangci.com/badges/github.com/logur/integration-logr.svg)](https://golangci.com/r/github.com/logur/integration-logr)
-[![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)](https://github.com/logur/integration-logr)
-[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/logur.dev/integration/logr)
+![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-61CFDD.svg?style=flat-square)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/mod/logur.dev/integration/logr)
 
 
 ## Installation
