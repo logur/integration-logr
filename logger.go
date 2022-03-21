@@ -18,7 +18,7 @@ type Logger struct {
 }
 
 // New returns a new Logr logger.
-func New(logger logur.Logger) *Logger {
+func New(logger logur.Logger) logr.Logger {
 	l := &Logger{
 		logger: logger,
 	}
@@ -27,11 +27,11 @@ func New(logger logur.Logger) *Logger {
 		l.levelEnabler = levelEnabler
 	}
 
-	return l
+	return logr.New(l)
 }
 
 // Info logs a non-error message with the given key/value pairs as context.
-func (l *Logger) Info(msg string, keysAndValues ...interface{}) {
+func (l *Logger) Info(level int, msg string, keysAndValues ...interface{}) {
 	if len(keysAndValues) > 0 {
 		l.logger.Info(msg, keyvals.ToMap(keysAndValues))
 
@@ -42,7 +42,7 @@ func (l *Logger) Info(msg string, keysAndValues ...interface{}) {
 }
 
 // Enabled tests whether this InfoLogger is enabled.
-func (l *Logger) Enabled() bool {
+func (l *Logger) Enabled(level int) bool {
 	if l.levelEnabler == nil {
 		return true
 	}
@@ -61,16 +61,8 @@ func (l *Logger) Error(err error, msg string, keysAndValues ...interface{}) {
 	l.logger.Error(msg)
 }
 
-// V returns an InfoLogger value for a specific verbosity level.
-//
-// Currently this function just returns the logger as is.
-func (l *Logger) V(level int) logr.InfoLogger {
-	// V is not properly implemented for the moment
-	return l
-}
-
 // WithValues adds some key-value pairs of context to a logger.
-func (l *Logger) WithValues(keysAndValues ...interface{}) logr.Logger {
+func (l *Logger) WithValues(keysAndValues ...interface{}) logr.LogSink {
 	if len(keysAndValues) == 0 {
 		return l
 	}
@@ -83,10 +75,14 @@ func (l *Logger) WithValues(keysAndValues ...interface{}) logr.Logger {
 }
 
 // WithName adds a new element to the logger's name.
-func (l *Logger) WithName(name string) logr.Logger {
+func (l *Logger) WithName(name string) logr.LogSink {
 	return &Logger{
 		logger:       l.logger,
 		levelEnabler: l.levelEnabler,
 		name:         fmt.Sprintf("%s-%s", l.name, name),
 	}
 }
+
+func (l *Logger) Init(info logr.RuntimeInfo){
+}
+
