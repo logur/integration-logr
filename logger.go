@@ -83,6 +83,5 @@ func (l *Logger) WithName(name string) logr.LogSink {
 	}
 }
 
-func (l *Logger) Init(info logr.RuntimeInfo){
+func (l *Logger) Init(info logr.RuntimeInfo) {
 }
-
